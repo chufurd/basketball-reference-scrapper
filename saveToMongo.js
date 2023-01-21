@@ -1,7 +1,10 @@
+require('dotenv').config()
 const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient;
 
-const uri = "mongodb+srv://chufurd:0bPM8hXrbStG4jJB@cluster0.zisfzrw.mongodb.net/?retryWrites=true&w=majority";
+const { MONGO_USERNAME, MONGO_PASSWORD, MONGO_URL } = process.env
+
+const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_URL}?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true });
 const players = JSON.parse(fs.readFileSync('players.json'));
 
