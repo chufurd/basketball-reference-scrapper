@@ -25,7 +25,7 @@ async function scrapePlayerData() {
     });
     console.log(players);
     await browser.close();
-    fs.writeFileSync('players1.json', JSON.stringify(players));
+    fs.writeFileSync('players.json', JSON.stringify(players));
 
 }
 
