@@ -5,7 +5,7 @@ A web scraper built using Puppeteer that collects player statistics from the web
 ## Installation
 
 1. Clone the repository
-git clone https://github.com/chufurd/basketball-scraper.git
+git clone https://github.com/chufurd/basketball-reference-scrapper.git
 
 2. Install the required dependencies
 npm install
