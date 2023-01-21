@@ -6,7 +6,7 @@ const { MONGO_USERNAME, MONGO_PASSWORD, MONGO_URL } = process.env
 
 const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_URL}?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true });
-const players = JSON.parse(fs.readFileSync('players.json'));
+const players = JSON.parse(fs.readFileSync('players1.json'));
 
 client.connect(err => {
     if(err) {
